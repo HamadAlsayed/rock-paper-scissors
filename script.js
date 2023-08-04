@@ -4,8 +4,16 @@ function getRandomNumber (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function getComputerChoice () {
-    
+function getComputerChoice (choice) {
+    choice = getRandomNumber(1, 3);
+    if (choice === 1) {
+        return "Rock";
+    } else if (choice === 2) {
+        return "Paper";
+    } else {
+        return "Scissors";
+    }
 }
 
 console.log(getRandomNumber(1, 3));
+console.log(getComputerChoice());
