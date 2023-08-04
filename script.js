@@ -15,5 +15,20 @@ function getComputerChoice (choice) {
     }
 }
 
-console.log(getRandomNumber(1, 3));
-console.log(getComputerChoice());
+function getPlayerChoice (choice) {
+    let input = prompt("Pick between rock, paper or scissors.", "Please type your choice here.").toLowerCase();
+
+    if (input === "rock") {
+        return 1;
+    } else if (input === "paper") {
+        return 2;
+    } else {
+        return 3;
+    }
+}
+
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        console.log("It's a tie!");
+    }
+}
