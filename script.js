@@ -42,7 +42,7 @@ function playRound(playerChoice, computerChoice) {
         return "Computer wins!";
     } else if (playerChoice === 3 && computerChoice === 1) {
         return "Computer wins!";
-    } else if (playerChoice == 3 && computerChoice === 2) {
+    } else if (playerChoice === 3 && computerChoice === 2) {
         return "Player wins!";
     }
 }
