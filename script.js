@@ -1,5 +1,4 @@
-let playerScore = 0;
-let computerScore = 0;
+let playerScore; let computerScore;
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -41,8 +40,6 @@ function getPlayerChoice() {
 
 function playRound(playerChoice, computerChoice) {
 
-
-
     if (playerChoice == computerChoice) {
         return "It's a tie";
     } else if (playerChoice == 1 && computerChoice == 2) {
@@ -58,16 +55,14 @@ function playRound(playerChoice, computerChoice) {
     } else if (playerChoice == 3 && computerChoice == 2) {
         return "You win! Scissors beat paper.";
     }
-
 }
 
 function game() {
-    if (playerScore != 5 || computerScore != 5) {
+    while (playerScore != 5 || computerScore != 5) {
         const playerChoice = getPlayerChoice();
         const computerChoice = getComputerChoice();
         console.log(playRound(playerChoice, computerChoice));
     }
-
 }
 
 game();
