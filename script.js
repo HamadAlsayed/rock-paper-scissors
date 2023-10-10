@@ -1,4 +1,28 @@
-let playerScore; let computerScore;
+let playerScore;
+let computerScore;
+let playerInput;
+
+const buttons = document.querySelectorAll(".choice");
+
+buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        playerInput = button.id;
+    });
+});
+
+function getPlayerChoice() {
+
+    if (playerInput == "rock") {
+        return 1;
+    } else if (playerInput == "paper") {
+        return 2;
+    } else if (playerInput == "scissors"){
+        return 3;
+    } else {
+        return 1;
+    }
+    
+}
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -16,26 +40,6 @@ function getComputerChoice() {
     } else {
         return 3;
     }
-}
-
-function getPlayerChoice() {
-    let playerInput = prompt("Pick between rock, paper or scissors.", "Please type your choice here.");
-
-    if (playerInput == null) {
-        alert("Please enter a valid choice.");
-    } else {
-        playerInput = playerInput.toLowerCase();
-        if (playerInput == "rock") {
-            return 1;
-        } else if (playerInput == "paper") {
-            return 2;
-        } else if (playerInput == "scissors"){
-            return 3;
-        } else {
-            return 1;
-        }
-    }
-    
 }
 
 function playRound(playerChoice, computerChoice) {
@@ -65,4 +69,4 @@ function game() {
     }
 }
 
-game();
+// game();
