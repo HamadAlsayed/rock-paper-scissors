@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock, Paper, Scissors</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-    <body>
+  <body>
+    <div class="flex-container">
+      <h1 class="title">Rock, paper or scissors?</h1>
 
-        <div class="flex-container">
+      <div class="button-container">
+        <button class="choice" id="rock">
+          <img src="./img/rock.png" alt="rock" />
+        </button>
 
-            <h1 id="title">Rock, paper or scissors?</h1>
+        <button class="choice" id="paper">
+          <img src="./img/paper.png" alt="paper" />
+        </button>
 
-            <div id="button-container">
+        <button class="choice" id="scissors">
+          <img src="./img/scissors.png" alt="scissors" />
+        </button>
+      </div>
 
-                <button class="choice" id="rock">
-                    <img src="./img/rock.png" alt="rock">
+      <div class="results">
+        <p>Match result:</p>
+        <p id="match-result"></p>
+        <p>Player score:</p>
+        <p id="p-score">0</p>
+        <p>Computer score:</p>
+        <p id="c-score">0</p>
+        <p>Winner:</p>
+        <p id="winner">First to 5!</p>
+      </div>
+    </div>
 
-                </button>
-    
-                <button class="choice" id="paper">
-                    <img src="./img/paper.png" alt="paper">
-                </button>
-    
-                <button class="choice" id="scissors">
-                    <img src="./img/scissors.png" alt="scissors">
-                </button>
-
-            </div>
-            
-        </div>
-        
-
-
-        <script src="script.js"></script>
-
-    </body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
